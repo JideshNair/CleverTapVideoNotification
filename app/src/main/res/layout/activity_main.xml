@@ -130,5 +130,15 @@
         app:layout_constraintTop_toBottomOf="@+id/timer"
         app:layout_constraintVertical_bias="0.092" />
 
+    <Button
+        android:id="@+id/videobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Send Video Notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputBox" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

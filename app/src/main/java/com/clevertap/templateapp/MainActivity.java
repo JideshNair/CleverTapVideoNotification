@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button sendBasicPush, sendCarouselPush, sendRatingPush, sendProductDisplayNotification, sendCTANotification, sendTimerNotification,sendInputBoxNotification;
+    Button sendBasicPush, sendCarouselPush, sendRatingPush, sendProductDisplayNotification, sendCTANotification, sendTimerNotification,sendInputBoxNotification,sendVideoNotification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +102,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (cleverTapAPI != null) {
                     cleverTapAPI.pushEvent("Send Input Box Notification");
+                }
+            }
+        });
+        sendVideoNotification = findViewById(R.id.videobutton);
+        sendVideoNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (cleverTapAPI != null) {
+                    cleverTapAPI.pushEvent("Send Video Notification");
                 }
             }
         });

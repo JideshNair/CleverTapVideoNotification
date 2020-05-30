@@ -8,7 +8,9 @@ enum TemplateType {
     FIVE_ICONS("pt_five_icons"),
     PRODUCT_DISPLAY("pt_product_display"),
     TIMER("pt_timer"),
-    INPUT_BOX("pt_input");
+    INPUT_BOX("pt_input"),
+  INPUT_VIDEO("pt_video");
+
 
 
     private final String templateType;
@@ -26,6 +28,7 @@ enum TemplateType {
             case "pt_product_display" : return PRODUCT_DISPLAY;
             case "pt_timer" : return TIMER;
             case "pt_input" : return INPUT_BOX;
+            case "pt_video" : return INPUT_VIDEO;
             default: return null;
         }
     }
@@ -34,6 +37,10 @@ enum TemplateType {
     @SuppressWarnings("NullableProblems")
     @Override
     public String toString() {
+        return getTemplateType();
+    }
+
+    public String getTemplateType() {
         return templateType;
     }
 }
